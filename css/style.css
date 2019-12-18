@@ -1,0 +1,529 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  background: #fafafa;
+  transition: all 0.3s linear;
+}
+body ul li {
+  list-style-type: none;
+  margin: 0 0.3rem;
+}
+
+dl, ol, ul {
+  margin: 0;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.asidebar {
+  background: #333;
+  font-size: 1.4rem;
+  width: 15%;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.asidebar ul li {
+  border-bottom: 0.1rem solid #262626;
+  padding: 1rem 2rem;
+  margin: 0;
+}
+.asidebar ul li .categories {
+  list-style-type: none;
+}
+.asidebar ul li .categories li {
+  padding: 0;
+  border: none;
+  position: relative;
+}
+.asidebar ul li .categories li .ml {
+  margin: 0;
+  padding: 0;
+}
+.asidebar ul li .categories li .ml div span {
+  padding-top: 1.5rem;
+}
+.asidebar ul li .categories li ul li {
+  padding: 1rem 0.5rem 1rem 2rem;
+  margin: 0;
+}
+.asidebar ul li .categories li ul li:first-child {
+  width: 88%;
+}
+.asidebar ul li .categories li ul:first-child {
+  border-bottom: 0.1rem solid #262626;
+}
+.asidebar ul li .categories li ul:nth-child(2) li {
+  width: 100%;
+  background: #0a0a0a;
+}
+.asidebar ul li .categories li ul:nth-child(2) li:hover {
+  background: #d3d1d1;
+}
+.asidebar ul li .categories li:hover {
+  background: none;
+}
+.asidebar ul li a {
+  color: rgba(255, 255, 255, 0.7);
+}
+.asidebar ul li:hover {
+  background: #d3d1d1;
+}
+.asidebar ul li:nth-child(8) {
+  padding: 0;
+}
+.asidebar ul li:nth-child(8):hover {
+  background: none;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 80;
+  transition: all 0.4s;
+}
+header .souq-top-bar {
+  position: relative;
+  background: #232f3e;
+  padding: 0.8rem 0;
+}
+header .souq-top-bar ul li {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+header .souq-top-bar ul li a {
+  color: #f0f0f0;
+  padding: 0 0.6rem;
+}
+header .souq-top-bar .left-bar li a {
+  border-right: 1px solid #999999;
+}
+header .souq-top-bar .left-bar li:last-child a {
+  border: none;
+}
+header .top-nav {
+  position: relative;
+  padding: 1rem 0;
+  background: #fff;
+}
+header .top-nav ul li {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #008bff;
+}
+header .top-nav .top-center,
+header .top-nav .search-btn {
+  padding: 0.5rem 0;
+}
+header .top-nav .top-center .form-control,
+header .top-nav .search-btn .form-control {
+  font-family: inherit;
+  padding: 2rem;
+  font-size: 1.4rem;
+  color: #0a0a0a;
+  border-right: none;
+}
+header .top-nav .top-center .form-control:focus,
+header .top-nav .search-btn .form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+header .top-nav .top-center .input-group-text,
+header .top-nav .search-btn .input-group-text {
+  padding: 0 2.5rem;
+  font-size: 2.5rem;
+  background: #008bff;
+  color: #fff;
+  cursor: pointer;
+  border-left: none;
+  border: 0.1rem solid #ced4da;
+  border-top-right-radius: 0.35rem;
+  border-bottom-right-radius: 0.35rem;
+}
+header .top-nav .top-right ul li {
+  padding: 1.5rem 0;
+}
+header .top-nav .top-right ul li:first-child {
+  padding-right: 0.5rem;
+  border-right: 0.1rem solid #d3d3d3;
+}
+header .souq-bottom-bar {
+  background: #e8ebee;
+  color: #252933;
+  padding: 0.5rem;
+}
+header .souq-bottom-bar ul li {
+  font-size: 1.2rem;
+}
+header .souq-bottom-bar ul li a {
+  color: #252933;
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+
+.section-one {
+  margin-top: 14rem;
+  padding: 1.5rem 0;
+}
+.section-one .deal {
+  height: 6rem;
+  border: 0.1rem solid #999999;
+  background: #fff;
+  font-size: 1.3rem;
+}
+.section-one .deal li {
+  padding: 0 1.2rem;
+  margin: 0;
+  color: #0a0a0a;
+  text-align: center;
+}
+.section-one .deal li:nth-child(2) {
+  border-right: 0.1rem solid #d3d3d3;
+}
+.section-one .deal li:last-child {
+  font-size: 1.2rem;
+  background: #252933;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  border: none;
+}
+
+.section-two {
+  padding: 1rem 0;
+}
+.section-two .carousel-caption {
+  width: 100%;
+  position: absolute;
+  right: 0%;
+  top: auto;
+  bottom: -4%;
+  left: 0%;
+  z-index: 10;
+  background: #252933;
+  text-align: left;
+  padding: 1rem 0.5rem 2.5rem;
+}
+.section-two a.a-1 {
+  margin-bottom: 2.5rem;
+}
+
+.section-four {
+  margin: 2rem 0;
+}
+
+.section-five,
+.section-six {
+  margin: 2rem 0;
+}
+.section-five .tabs,
+.section-six .tabs {
+  background: #fff;
+  padding: 2rem;
+  border-bottom: 0.5rem solid #e7e7e7;
+  border-left: 0.1rem solid #e7e7e7;
+  border-right: 0.1rem solid #e7e7e7;
+}
+.section-five .nav-tabs .nav-link,
+.section-six .nav-tabs .nav-link {
+  border-top: 0.3rem solid #2199e8;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.section-nine,
+.section-eleven {
+  margin: 3rem 0;
+}
+.section-nine .card-deck .card,
+.section-eleven .card-deck .card {
+  margin: 0 0.8rem;
+}
+.section-nine .card-deck .card .card-img,
+.section-eleven .card-deck .card .card-img {
+  width: 100%;
+  height: 50%;
+  padding: 1.5rem 3rem;
+}
+.section-nine .card-deck .card .card-text,
+.section-eleven .card-deck .card .card-text {
+  color: orange;
+  margin: 2rem 0;
+}
+.section-nine .card-deck .card .card-text span,
+.section-eleven .card-deck .card .card-text span {
+  color: #0a0a0a;
+  padding: 0 1rem;
+}
+.section-nine .card-deck .card h3,
+.section-eleven .card-deck .card h3 {
+  color: #006fcc;
+}
+
+.section-eleven .card-deck .card {
+  margin: 0;
+}
+.section-eleven .card-deck .card .card-img {
+  width: auto;
+  height: auto;
+}
+
+footer {
+  background: #ededed;
+  padding-top: 3rem;
+}
+footer .first-row {
+  padding: 2rem 0;
+}
+footer .first-row ul li a {
+  color: #0a0a0a;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+footer .first-row ul li a h4 {
+  font-weight: bold;
+}
+footer .first-row .social-box ul li:nth-child(2) a {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+footer .first-row .social-box ul li:nth-child(3) a ul li {
+  padding: 0.8rem 0;
+  font-size: 2.4rem;
+  padding-right: 0.5rem;
+}
+footer .first-row .social-box ul li:nth-child(3) a ul li:first-child i {
+  color: #008bff;
+}
+footer .first-row .social-box ul li:nth-child(3) a ul li:nth-child(2) i {
+  color: #fff;
+  font-size: 1.8rem;
+  background: #45629E;
+  padding: 0.3rem 0.2rem 0 0.8rem;
+}
+footer .first-row .social-box ul li:nth-child(3) a ul li:nth-child(3) i {
+  color: #db4437;
+}
+footer .first-row .social-box ul li:nth-child(3) a ul li:nth-child(4) i {
+  color: #c0181d;
+}
+footer .first-row .social-box ul li:nth-child(3) a ul li:nth-child(5) i {
+  color: #006fcc;
+}
+footer .first-row .social-box ul li:nth-child(3) a ul li:nth-child(6) i {
+  color: #cb2027;
+}
+footer .first-row .social-box ul li:nth-child(4) a {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+footer .first-row .social-box ul li:nth-child(5) a ul li {
+  font-size: 2.4rem;
+  padding: 0.8rem 0;
+}
+footer .first-row .social-box ul li:nth-child(5) a ul li i {
+  color: #1585cf;
+}
+footer .first-row .help-center-box ul {
+  background: #fff;
+  padding: 1rem 1rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+footer .first-row .help-center-box ul li:first-child {
+  color: #999999;
+  font-size: 3rem;
+}
+footer .first-row .help-center-box ul li:last-child ul {
+  box-shadow: none;
+  margin: 0;
+}
+footer .first-row .help-center-box ul li:last-child ul li:first-child {
+  color: #2199e8;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+footer .second-row {
+  background: #ddd;
+  padding: 2rem 0;
+}
+footer .second-row p {
+  color: #0a0a0a;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+footer .second-row ul li {
+  font-size: 1.4rem;
+  line-height: 3.4rem;
+}
+footer .second-row ul li a {
+  color: #006fcc;
+  padding-right: 1.5rem;
+  border-right: 0.1rem solid #ccc;
+}
+footer .second-row ul li:last-child a {
+  border: none;
+}
+footer .second-row ul:last-child li a {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 98%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 95%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 92%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  header .souq-top-bar .container .col-right {
+    display: none;
+  }
+  header .top-nav {
+    padding: 0.5rem 0;
+  }
+  header .top-nav ul li a img {
+    width: 9.5rem;
+    height: 3.5rem;
+  }
+  header .top-nav .top-center {
+    padding: 0;
+  }
+  header .top-nav .top-right ul li a {
+    font-size: 1.2rem;
+  }
+  header .souq-bottom-bar {
+    display: none;
+  }
+
+  .section-one {
+    margin-top: 10rem;
+  }
+  .section-one .deal {
+    font-size: 1.2rem;
+  }
+  .section-one .last-col {
+    display: none;
+  }
+
+  .section-two .container .last-col {
+    display: none;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .asidebar {
+    width: 18%;
+    z-index: 99;
+  }
+}
+@media screen and (max-width: 992px) {
+  .asidebar {
+    width: 20%;
+    z-index: 99;
+  }
+
+  .section-one .deal li:nth-child(1) {
+    width: 40%;
+  }
+  .section-one .deal li:nth-child(3) {
+    width: 35%;
+  }
+  .section-one .second-col {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .asidebar {
+    width: 25%;
+    z-index: 99;
+  }
+
+  header .top-nav {
+    max-height: 6rem;
+  }
+  header .top-nav .top-center {
+    display: none;
+  }
+
+  .section-one .deal li:nth-child(1) {
+    width: 30%;
+  }
+  .section-one .deal li:nth-child(3) {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 625px) {
+  header .souq-top-bar {
+    display: none;
+  }
+
+  .section-one {
+    margin-top: 6rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .asidebar {
+    width: 50%;
+    z-index: 99;
+  }
+
+  .section-one .deal li:nth-child(1) {
+    width: 40%;
+  }
+  .section-one .deal li:nth-child(2) {
+    display: none;
+  }
+  .section-one .deal li:nth-child(3) {
+    display: none;
+  }
+
+  footer .first-row .hidden-footer {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
